@@ -19,6 +19,7 @@ import {
     hexToRgb,
 } from '@gitbook/colors';
 import { IconStyle, IconsProvider } from '@gitbook/icons';
+import { Analytics } from '@vercel/analytics/next';
 import * as ReactDOM from 'react-dom';
 
 import { type FontData, getFontData } from '@/fonts';
@@ -204,6 +205,7 @@ export async function CustomizationRootLayout(props: {
                         {children}
                     </RootLayoutClientContexts>
                 </IconsProvider>
+                <Analytics />
             </body>
         </html>
     );
